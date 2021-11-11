@@ -25,7 +25,7 @@ func main() {
 	fib := Fib
 	mFib := MemoizedFib()
 
-	eval := 25
+	eval := 3
 	fmt.Println("Calculating the ", eval, "nth fib number")
 
 	s1 := time.Now()
@@ -39,6 +39,7 @@ func main() {
 	fmt.Println("Basic Fib: ", a1, " and took ", d1.Nanoseconds(), " nanoseconds.")
 	fmt.Println("Memo Fib: ", a2, " and took ", d2.Nanoseconds(), " nanoseconds.")
 
+	udemyReviewMain()
 }
 
 func MemoizedFib() FuncIntInt {
