@@ -39,7 +39,11 @@ func main() {
 	fmt.Println("Basic Fib: ", a1, " and took ", d1.Nanoseconds(), " nanoseconds.")
 	fmt.Println("Memo Fib: ", a2, " and took ", d2.Nanoseconds(), " nanoseconds.")
 
+	fmt.Println("\nExecuting udemyReviewMain!...")
 	udemyReviewMain()
+
+	fmt.Println("\nExecuting udemyTemplatesMain!...")
+	udemyTemplatesMain()
 }
 
 func MemoizedFib() FuncIntInt {
