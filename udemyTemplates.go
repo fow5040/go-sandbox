@@ -35,7 +35,7 @@ func udemyTemplatesMain() {
 	*/
 
 	// Here we use "Must", which is a handy dandy wrapper provided
-	//  by the teplate package to wrap the error handling for us
+	//  by the template package to wrap the error handling for us
 	aTemplate := template.Must(template.ParseGlob("html/*.gohtml"))
 
 	err = aTemplate.ExecuteTemplate(os.Stdout, "base.gohtml", 42)
@@ -43,4 +43,9 @@ func udemyTemplatesMain() {
 		log.Fatal("Couldn't write to stdout", err)
 	}
 
+	// Composite Template example
+	err = aTemplate.ExecuteTemplate(os.Stdout, "composite.gohtml", []string{"guy1", "guy2"})
+	if err != nil {
+		log.Fatal("Couldn't write to stdout", err)
+	}
 }
