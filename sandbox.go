@@ -9,23 +9,26 @@ import (
 type FuncIntInt func(int) int
 
 func main() {
+	fmt.Println("\n\nStarting program...")
 	fmt.Println("go-sandbox at ", time.Now(), " o-clock!!")
 
-	randMin := 0
-	randMax := 34
+	rand.Seed(time.Now().UnixNano())
+	randMin := 10
+	randMax := 40
+	myRand := rand.Intn(randMax)
 	fmt.Println(
 		"I'm thinking of a number between ",
 		randMin,
 		" and ",
 		randMax,
 		"... what about: ",
-		rand.Intn(randMax),
+		myRand,
 	)
 
 	fib := Fib
 	mFib := MemoizedFib()
 
-	eval := 3
+	eval := myRand
 	fmt.Println("Calculating the ", eval, "nth fib number")
 
 	s1 := time.Now()
@@ -42,8 +45,11 @@ func main() {
 	fmt.Println("\nExecuting udemyReviewMain!...")
 	udemyReviewMain()
 
-	fmt.Println("\nExecuting udemyTemplatesMain!...")
-	udemyTemplatesMain()
+	// fmt.Println("\nExecuting udemyTemplatesMain!...")
+	// udemyTemplatesMain()
+
+	fmt.Println("\nExecuting tourMain!...")
+	tourMain()
 }
 
 func MemoizedFib() FuncIntInt {

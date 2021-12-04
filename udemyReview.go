@@ -58,4 +58,7 @@ func udemyReviewMain() {
 
 	talkAboutAFruit(small)
 	talkAboutAFruit(large)
+
+	aNewApple := apple{4, "dark red"}
+	talkAboutAFruit(aNewApple)
 }
